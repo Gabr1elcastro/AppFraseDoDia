@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/adamina"
+        android:text="Prhase of the Day "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/aleatoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#000000"
+        android:onClick="fraseAleatoria"
+        android:text="Random"
+        android:textColorLink="#9C27B0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/todas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:backgroundTint="#000000"
+        android:onClick="todasAsFrases"
+        android:text="All"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="304dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_frase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18sp"
+        android:text="..."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/space"
+        app:layout_constraintEnd_toEndOf="@+id/space"
+        app:layout_constraintStart_toStartOf="@+id/space"
+        app:layout_constraintTop_toTopOf="@+id/space" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Input_RecebeFrases"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        android:hint="insert your prhase"
+        android:onClick="captandoFrases"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <Button
+        android:id="@+id/Btn_EnviaFrases"
+        android:layout_width="82dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="12dp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#000000"
+        android:onClick="captandoFrases"
+        android:text="enter"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Input_RecebeFrases"
+        app:layout_constraintEnd_toEndOf="@+id/Input_RecebeFrases"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Input_RecebeFrases" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
